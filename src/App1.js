@@ -1,5 +1,6 @@
 import React from "react";
 import './App.css'
+import Lifecircle from "./component/lifecircle";
 import ChartBar1 from "./exercise/ChartBar1";
 import Profile from "./exercise/Profile";
 import Session2 from "./exercise/Session2";
@@ -8,7 +9,8 @@ import Session2 from "./exercise/Session2";
 function App1() {
   return (
     <>
-    <Session2></Session2>
+    <Lifecircle></Lifecircle>
+    {/* <Session2></Session2>
     
     <div className="ChartBar1">
       <ChartBar1 text='BANDWIDTH' color1='red1' colors='red' percentage={20}></ChartBar1>
@@ -26,7 +28,7 @@ function App1() {
       <Profile Name='PHP' IconName={<i class="fa-solid fa-box-open"></i>} color='blue' likes={25}></Profile>
       <Profile Name='Java' IconName={<i class="fa-brands fa-js-square"></i>} color='yellow' likes={70}></Profile>
       <Profile Name='.Net' IconName={<i class="fa-solid fa-diagram-project"></i>} color='purple' likes={35}></Profile>
-    </div>
+    </div> */}
     </>
   );
 }
