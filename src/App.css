@@ -1,0 +1,11 @@
+.Profile,
+.ChartBar1 {
+    border: 1px solid #000;
+    margin: 20px;
+}
+
+.Profile {
+    padding: 30px 20px;
+    width: 50%;
+    box-shadow: 3px 3px rgba(0,0,0,0.3);
+}

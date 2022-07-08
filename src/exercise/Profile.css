@@ -1,0 +1,88 @@
+.Profile-main {
+    display: block;
+}
+
+.boxpro,
+.txtpro,
+.prog{
+    display: inline-block;
+}
+
+.iconpro {
+    color: white;
+}
+
+.bgc-green {
+    background-color: green;
+    width: 40%;
+    height: 10px;
+}
+
+.bgc-red {
+    background-color:red ;
+    width: 40%;
+    height: 10px;
+}
+
+.bgc-blue {
+    background-color: blue;
+    width: 40%;
+    height: 10px;
+}
+
+.bgc-yellow {
+    background-color:yellow ;
+    width: 40%;
+    height: 10px;
+}
+
+.bgc-purple {
+    background-color:purple ;
+    width: 40%;
+    height: 10px;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.width-35 {
+    width: 35%;
+}
+
+.box-green{
+    background-color: green;
+    width: 25px;
+}
+
+.box-red{
+    background-color: red;
+    width: 25px;
+}
+
+.box-blue{
+    background-color: blue;
+    width: 25px;
+}
+
+.box-yellow{
+    background-color: yellow;
+    width: 25px;
+}
+
+.box-purple{
+    background-color: purple;
+    width: 25px;
+}

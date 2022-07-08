@@ -1,0 +1,81 @@
+.ChartBar-main {
+    height: 50px;
+    line-height: 50px;
+    margin: 20px;
+    color: #fff;
+    font-weight: 500;
+    background-color: #efefef;
+}
+
+.txt,
+.perc {
+    font-size: 13px;
+    display: inline-block;
+}
+
+.txt {
+    width: 10%;
+    text-align: end;
+    padding-right: 10px;
+}
+
+.perc {
+    padding-left: 20px;
+}
+
+.background-red1 {
+    background-color: #c0392b;
+}
+
+.background-lightblue1 {
+    background-color:#2980b9 ;
+}
+
+.background-green1 {
+    background-color:#27ae60 ;
+}
+
+.background-yellow1 {
+    background-color:#f39c12 ;
+}
+
+.background-purple1 {
+    background-color:#8e44ad ;
+}
+
+.background-pink1 {
+    background-color:#e84393 ;
+}
+
+.background-blue1 {
+    background-color:#0984e3 ;
+}
+
+.background-red {
+    background-color:#e74c3c ;
+    width:20% ;
+}
+.background-green {
+    background-color:#2ecc71 ;
+    width:70% ;
+}
+.background-lightblue {
+    background-color:#3498db ;
+    width:50% ;
+}
+.background-pink {
+    background-color:#fd79a8 ;
+    width: 80%;
+}
+.background-purple {
+    background-color:#9b59b6 ;
+    width:45% ;
+}
+.background-yellow {
+    background-color:#f1c40f ;
+    width: 30%;
+}
+.background-blue {
+    background-color:#74b9ff ;
+    width: 37%;
+}
