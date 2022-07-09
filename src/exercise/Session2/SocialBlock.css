@@ -1,0 +1,43 @@
+.SB-main {
+    position: relative;
+    height: 20em;
+    width: 15%;
+}
+
+.bgc--blue {
+    background-color: #74b9ff;
+}
+
+.bgc--blue1 {
+    background-color: #00cec9;
+}
+
+.bgc--orange {
+    background-color: #e17055;
+}
+
+.bgc--red {
+    background-color: #ff7675;
+}
+
+.iconSB {
+    font-size: 50px;
+    padding: 10px 0 0 30px;
+    color: white;
+}
+
+.txtSB-main {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0 20px 20px;
+    color: white;
+}
+
+.txtSB {
+    font-size: 20px;
+    font-weight:lighter;
+}
+
+.totalSB {
+    font-size: 13px;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../exercise/Profile.css'
+import '../Session2/Profile.css'
 
 export default function Profile(props) {
     const {IconName, Name, color, likes} = props
@@ -7,9 +7,7 @@ export default function Profile(props) {
   return (
     <>
     <div className='Profile-main'>
-    <div className={`boxpro box-${color}`}>
-      <span className='iconpro'>{IconName}</span>
-    </div>
+    <span className={`iconpro bgc-${color}`}>{IconName}</span>
     <span className='txtpro'>{Name}</span>
     <span className={`prog bgc-${color} width-${likes}`}></span>
     </div>

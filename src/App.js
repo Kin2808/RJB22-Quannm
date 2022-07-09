@@ -1,58 +1,50 @@
-import './App.css';
-import img from './Avatar.jpg'
+import React from "react";
+import './App.css'
+// import SocialBlock from "./exercise/Session2/SocialBlock";
+// import Lifecircle from "./component/Example/lifecircle";
+// import ChartBar1 from "./exercise/Session2/ChartBar1";
+// import Profile from "./exercise/Session2/Profile";
+// import Session1 from "./exercise/Session1/Session1";
+// import Session2 from "./exercise/Session2/Session2";
+
+
+
 
 function App() {
-  const user1 = {
-    name: 'Quan',
-    age: '18 Tuổi'
-  }
-  const user2 = {
-    name: 'Kin',
-    age: '14 Tuổi'
-  }
-  const user3 = {
-    name: 'Fo',
-    age: '19 Tuổi'
-  }
-  const user4 = {
-    name: 'Dat',
-    age: '20 Tuổi'
-  }
-  const user5 = {
-    name: 'Son',
-    age: '17 Tuổi'
-  }
-  const user6 = {
-    name: 'Dai',
-    age: '13 Tuổi'
-  }
-
-  function render(user) {
-    return <>
-    <img src={img} alt='avatar'></img>
-    <h1>{user.name}</h1>
-    <p>{user.age}</p>
-    </>
-  }
-
   return (
     <>
-    <div className='row'>
-      <p className='col'>{render(user1)}</p>
-      <p className='col'>{render(user2)}</p>
-    </div>
+    {/* <Session1></Session1> */}
 
-    <div className='row'>
-      <p className='col'>{render(user3)}</p>
-      <p className='col'>{render(user4)}</p>
-    </div>
+    {/* <Session2></Session2> */}
+    
+    {/* <div className="ChartBar1">
+      <ChartBar1 text='BANDWIDTH' color1='red1' colors='red' percentage={20}></ChartBar1>
+      <ChartBar1 text='STORAGE' color1='lightblue1' colors='lightblue' percentage={50}></ChartBar1>
+      <ChartBar1 text='USERS' color1='green1' colors='green' percentage={70}></ChartBar1>
+      <ChartBar1 text='VISITORS' color1='yellow1' colors='yellow' percentage={30}></ChartBar1>
+      <ChartBar1 text='EMAILS' color1='purple1' colors='purple' percentage={45}></ChartBar1>
+      <ChartBar1 text='BASIC' color1='pink1' colors='pink' percentage={80}></ChartBar1>
+      <ChartBar1 text='OTHERS' color1='blue1' colors='blue' percentage={37}></ChartBar1>
+    </div> */}
 
-    <div className='row'>
-      <p className='col'>{render(user5)}</p>
-      <p className='col'>{render(user6)}</p>
-    </div>
+    {/* <div className="Profile">
+      <Profile Name='HTML' IconName={<i class="fa-brands fa-android"></i>} color='green' likes={60}></Profile>
+      <Profile Name='CSS' IconName={<i class="fa-brands fa-apple"></i>} color='red' likes={50}></Profile>
+      <Profile Name='PHP' IconName={<i class="fa-solid fa-box-open"></i>} color='blue' likes={25}></Profile>
+      <Profile Name='Java' IconName={<i class="fa-brands fa-js-square"></i>} color='yellow' likes={70}></Profile>
+      <Profile Name='.Net' IconName={<i class="fa-solid fa-diagram-project"></i>} color='purple' likes={35}></Profile>
+    </div> */}
+
+    {/* <div className="SocialBlock row justify-content-around">
+      <SocialBlock className='col-2' text='Facebook' color='blue' iconName={<i className="fa-brands fa-facebook-f"></i>} total={500000} unit='Likes'></SocialBlock>
+      <SocialBlock className='col-2' text='Twitter' color='blue1' iconName={<i className="fa-brands fa-twitter"></i>} total={40000} unit='Tweets'></SocialBlock>
+      <SocialBlock className='col' text='Google +' color='orange' iconName={<i className="fa-brands fa-google-plus-g"></i>} total={460000} unit='Plus'></SocialBlock>
+      <SocialBlock className='col' text='Pinterest' color='red' iconName={<i className="fa-brands fa-pinterest"></i>} total={34000} unit='Pins'></SocialBlock>
+    </div> */}
+
+    {/* <Lifecircle></Lifecircle> */}
     </>
-  )
+  );
 }
 
 export default App;

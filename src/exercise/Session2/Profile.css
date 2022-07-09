@@ -8,8 +8,19 @@
     display: inline-block;
 }
 
+.txtpro {
+    width: 50px;
+    margin: 0 30px 15px 15px;
+}
+
 .iconpro {
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+.iconpro i {
     color: white;
+    width: 20px;
 }
 
 .bgc-green {
