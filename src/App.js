@@ -1,6 +1,8 @@
 import React from "react";
 import './App.css'
-import ChartColumn from "./exercise/Session2/ChartColumn";
+// import ChartColumn from "./exercise/Session2/ChartColumn";
+// import LikeButton from "./exercise/Session3/Like-button/LikeButton";
+import RateButton from "./exercise/Session3/Rate button/RateButton";
 // import SocialBlock from "./exercise/Session2/SocialBlock";
 // import Lifecircle from "./component/Example/lifecircle";
 // import ChartBar1 from "./exercise/Session2/ChartBar1";
@@ -43,14 +45,18 @@ function App() {
       <SocialBlock className='col' text='Pinterest' color='red' iconName={<i className="fa-brands fa-pinterest"></i>} total={34000} unit='Pins'></SocialBlock>
     </div> */}
 
-    <div className="ChartColumn">
+    {/* <div className="ChartColumn">
       <ChartColumn text="TODAY'S VISITORS" total={'24,599'} unit='' percentages={[20, 45, 30, 80, 75]}></ChartColumn>
       <ChartColumn text="YESTERDAY'S VISITORS" total={'15,699'} unit='' percentages={[20, 45, 30, 80, 75]}></ChartColumn>
       <ChartColumn text="TOTAL DOWNLOADS" total={'1,24,599'} unit='' percentages={[20, 45, 30, 80, 75]}></ChartColumn>
       <ChartColumn text="CURRENT INCOME" total={'54,599'} unit='$' percentages={[20, 45, 30, 80, 75]}></ChartColumn>
-    </div>
+    </div> */}
 
     {/* <Lifecircle></Lifecircle> */}
+
+    {/* <LikeButton></LikeButton> */}
+
+    <RateButton></RateButton>
     </>
   );
 }
