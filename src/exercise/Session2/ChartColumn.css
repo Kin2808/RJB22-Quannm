@@ -1,0 +1,38 @@
+.ChartColumn-main{
+    border: 1px solid #000;
+    box-shadow:3px 3px rgba(0,0,0,0.3);
+    width: 25%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.Chart-info {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+}
+
+.txt-CC {
+    padding-top: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding-bottom: 30px;
+    
+}
+
+.font-size50 {
+    font-size: 50px;
+    color: rgb(10, 169, 209);
+    font-weight: lighter;
+}
+
+.font-size14 {
+    font-size: 14px;
+    font-weight: 500;
+}
