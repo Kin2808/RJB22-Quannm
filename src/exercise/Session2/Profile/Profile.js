@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Session2/Profile.css'
+import './Profile.css'
 
 export default function Profile(props) {
     const {IconName, Name, color, likes} = props

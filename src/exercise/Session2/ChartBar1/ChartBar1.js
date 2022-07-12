@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Session2/ChartBar1.css'
+import '../ChartBar1/ChartBar1.css'
 
 export default function ChartBar1(props) {
     const {text, color1, colors, percentage} = props

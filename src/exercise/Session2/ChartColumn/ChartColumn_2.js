@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Session2/ChartColumn_2.css'
+import './ChartColumn_2.css'
 
 export default function ChartColumn_2(props) {
     const {color, text, percent} = props

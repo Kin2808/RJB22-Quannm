@@ -1,14 +1,16 @@
 import React from "react";
 import './App.css'
-// import ChartColumn from "./exercise/Session2/ChartColumn";
-// import LikeButton from "./exercise/Session3/Like-button/LikeButton";
+import ChartColumn from "./exercise/Session2/ChartColumn/ChartColumn";
+import LikeButton from "./exercise/Session3/Like-button/LikeButton";
 import RateButton from "./exercise/Session3/Rate button/RateButton";
-// import SocialBlock from "./exercise/Session2/SocialBlock";
-// import Lifecircle from "./component/Example/lifecircle";
-// import ChartBar1 from "./exercise/Session2/ChartBar1";
-// import Profile from "./exercise/Session2/Profile";
-// import Session1 from "./exercise/Session1/Session1";
-// import Session2 from "./exercise/Session2/Session2";
+import SocialBlock from "./exercise/Session2/SocialBlock/SocialBlock";
+import Lifecircle from "./component/Example/lifecircle";
+import ChartBar1 from "./exercise/Session2/ChartBar1/ChartBar1";
+import Profile from "./exercise/Session2/Profile/Profile";
+import Session1 from "./exercise/Session1/Session1";
+import Session2 from "./exercise/Session2/BasicUI/Session2";
+import TABS from "./exercise/Session3/TABS/TABS";
+
 
 
 
@@ -56,7 +58,10 @@ function App() {
 
     {/* <LikeButton></LikeButton> */}
 
-    <RateButton></RateButton>
+    {/* <RateButton></RateButton> */}
+
+    <TABS></TABS>
+    
     </>
   );
 }

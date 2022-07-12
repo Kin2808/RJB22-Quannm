@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Session2/SocialBlock.css'
+import './SocialBlock.css'
 
 export default function SocialBlock(props) {
     const {text, color, iconName, total, unit} = props

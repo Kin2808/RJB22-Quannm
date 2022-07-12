@@ -1,13 +1,13 @@
 import React from 'react'
-import '../Session2/Session2.css'
-import img1 from '../img/1.jpg'
-import img2 from '../img/2.jpg'
-import img3 from '../img/3.jpg'
+import '../BasicUI/Session2.css'
+// import img1 from '../BasicUI/img/1.jpg'
+import img2 from '../BasicUI/img/2.jpg'
+// import img3 from '../BasicUI/img/3.jpg'
 
 export default function Session2() {
-  return (
+    return (
     <>
-    <div className='basic-1'>        
+    {/* <div className='basic-1'>        
         <img src={img1} alt='1'></img>
         <div>
             <h3>Clothing & Apparel</h3>
@@ -16,7 +16,7 @@ export default function Session2() {
             <p>Kid's Fashion</p>
             <p>Mens</p>
         </div>
-    </div>
+    </div> */}
 
     <div className='basic-2'>
         <img src={img2} alt='2'></img>
@@ -24,18 +24,18 @@ export default function Session2() {
             <p className='border-bottom'>YOUNG SHOP</p>
             <p className='blue'>Samsung UHD TV 24inch</p>
             <div className='basic-2-icon'>
-                <i class="fa-solid fa-star yellow"></i>
-                <i class="fa-solid fa-star yellow"></i>
-                <i class="fa-solid fa-star yellow"></i>
-                <i class="fa-solid fa-star yellow"></i>
-                <i class="fa-regular fa-star"></i>
+            <i class="fa-solid fa-star yellow"></i>
+            <i class="fa-solid fa-star yellow"></i>
+            <i class="fa-solid fa-star yellow"></i>
+            <i class="fa-solid fa-star yellow"></i>
+            <i class="fa-regular fa-star"></i>
                 02
             </div>
             <p className='font-weight'>$599</p>
         </div>
     </div>
 
-    <div className='basic-3'>
+    {/* <div className='basic-3'>
         <img src={img3} alt='3'></img>
         <div className='basic-3-txt'>
             <p>Technology</p>
@@ -43,7 +43,7 @@ export default function Session2() {
             <h3 className='mb-30'>Reviews & Experiences</h3>
             <p>Feb 21, 2021 by drfurion</p>
         </div>
-    </div>
+    </div> */}
 
     
     </>

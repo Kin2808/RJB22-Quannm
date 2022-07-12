@@ -1,4 +1,4 @@
-import img from '../img/Avatar.jpg'
+import img from './Avatar.jpg'
 
 function Session1() {
   const user1 = {

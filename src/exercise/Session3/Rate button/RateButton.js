@@ -9,7 +9,7 @@ export default class RateButton extends Component {
             star: 0
         }
     }
-    setStar = (data, event) => {
+    setStar = (data) => {
         this.setState({
             star: data
         })
@@ -26,7 +26,6 @@ export default class RateButton extends Component {
         for (let i = star; i < MAX_STAR; i++) {
             content.push(<i onClick={this.setStar.bind(this, i+1)} class="fa-regular fa-star"></i>)
         }
-        content.push(<p>{star}</p>);
         return content;
     }
     
@@ -34,7 +33,7 @@ export default class RateButton extends Component {
     return (
         <>
       <div>{this.ratingStar(this.state.star)}</div>
-      <button onClick={this.setStar.bind(this, 4)}>click</button>
+      
         </>
     )
   }
