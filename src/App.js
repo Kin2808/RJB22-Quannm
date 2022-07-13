@@ -10,6 +10,7 @@ import Profile from "./exercise/Session2/Profile/Profile";
 import Session1 from "./exercise/Session1/Session1";
 import Session2 from "./exercise/Session2/BasicUI/Session2";
 import TABS from "./exercise/Session3/TABS/TABS";
+import IconTab from "./exercise/Session3/TABS/iconTab/iconTab";
 
 
 
@@ -60,8 +61,9 @@ function App() {
 
     {/* <RateButton></RateButton> */}
 
-    <TABS></TABS>
+    {/* <TABS></TABS> */}
     
+    <IconTab></IconTab>
     </>
   );
 }

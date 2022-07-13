@@ -1,4 +1,5 @@
 import img from './Avatar.jpg'
+import React from 'react'
 
 function Session1() {
   const user1 = {

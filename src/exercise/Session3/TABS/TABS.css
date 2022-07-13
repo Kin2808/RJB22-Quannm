@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.tabs-info div {
+.tabs-info button {
     min-width: 150px;
     cursor: pointer;
     height: 51px;
@@ -15,10 +15,17 @@
     font-weight: 700;
     letter-spacing: 2px;
     font-size: 12px;
+    border: none;
+    background-color: #fff;
 }
 
-.tabs-info div:hover {
+.tabs-info button:hover {
     background-color: #eee;
+}
+
+.tabs-info button:focus {
+    background-color: #2ecc71;
+    border-style: none;
 }
 
 .tabs-txt {
@@ -27,8 +34,9 @@
     margin-top: 25px
 }
 
-.a {
+.tabs {
     display: block;
     width: 600px;
     margin: auto
 }
+
