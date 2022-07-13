@@ -25,7 +25,8 @@
 
 .tabs-info button:focus {
     background-color: #2ecc71;
-    border-style: none;
+    outline: none;
+    color: #fff;
 }
 
 .tabs-txt {

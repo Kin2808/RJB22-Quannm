@@ -1,0 +1,43 @@
+.Texttabs-main {
+    text-align: center;
+}
+
+.Texttabs-info {
+    display: flex;
+    justify-content: center;
+}
+
+.Texttabs-info button {
+    min-width: 150px;
+    cursor: pointer;
+    height: 51px;
+    line-height: 51px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 12px;
+    border: none;
+    background-color: #fff;
+}
+
+.Texttabs-info button:hover {
+    background-color: #eee;
+}
+
+.Texttabs-info button:focus {
+    background-color: #2ecc71;
+    outline: none;
+    color: #fff;
+}
+
+.Texttabs-txt {
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 25px
+}
+
+.Texttabs {
+    
+    width: 600px;
+    margin: auto
+}
+

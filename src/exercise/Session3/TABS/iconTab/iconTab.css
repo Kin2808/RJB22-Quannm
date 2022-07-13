@@ -1,3 +1,38 @@
-div {
+.IconTab-main {
     text-align: center;
+}
+
+.IconTab {
+    width: 750px;
+    margin: 0 auto;
+}
+
+.IconTab-main button:focus {
+    color: green;
+    outline: none;
+}
+
+.IconTab-info {
+    border: none;
+    background-color: #fff;
+    width: 184px;
+    padding-bottom: 24px;
+}
+
+.IconTab-info:hover p,
+.IconTab-info:hover i {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.IconTab-info i {
+    font-size: 64px;
+    opacity: 0.4;
+}
+
+.IconTab-info p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    opacity: 0.4;
 }
