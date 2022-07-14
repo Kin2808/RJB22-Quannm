@@ -12,11 +12,7 @@ import Session2 from "./exercise/Session2/BasicUI/Session2";
 import TABS from "./exercise/Session3/TABS/ButtonTab/TABS";
 import IconTab from "./exercise/Session3/TABS/iconTab/iconTab";
 import TextTab from "./exercise/Session3/TABS/TextTab/TextTab";
-import ButtonAccordions from "./exercise/Session3/TABS/Accordions/button-accordions/ButtonAccordions";
-
-
-
-
+import ButtonAccordions from "./exercise/Session3/Accordions/Button-accordions/main";
 
 function App() {
   return (

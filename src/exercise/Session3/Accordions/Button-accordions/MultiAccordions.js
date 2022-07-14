@@ -5,8 +5,8 @@ export default function MultiAccordions(props) {
   const [isActive, setIsActive] = useState(false);
   return (
     <div>
-      <div onClick={() => setIsActive(!isActive)} key={`data-${index}`}>
-        {data.name}
+      <div className="Acco" onClick={() => setIsActive(!isActive)} key={`data-${index}`}>
+        <button>{data.name}</button>
         {isActive && <div>{data.content}</div>}
       </div>
     </div>

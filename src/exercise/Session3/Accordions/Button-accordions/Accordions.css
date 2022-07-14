@@ -1,0 +1,38 @@
+.Acco-main {
+    display: flex;
+}
+
+.Acco-info {
+    width: 50%;
+}
+
+h4 {
+    text-align: center;
+    margin: 20px 0 80px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+h5{
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.Acco {
+    display: flex;
+    flex-direction: column;
+}
+
+.Acco button {
+    border: none;
+    background-color: #fff;
+    text-align: left;
+}
+
+.Acco button:focus {
+    background-color: green;
+    outline: none;
+}
+

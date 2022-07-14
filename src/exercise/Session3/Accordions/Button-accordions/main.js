@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MultiAccordions from "./MultiAccordions";
+import "./Accordions.css";
 
 const AccordionsDatas = [
   {
@@ -22,28 +23,33 @@ const AccordionsDatas = [
 export default function ButtonAccordions() {
   const [indexClicked, setindexClicked] = useState(0);
   return (
-    <div className="a">
-      <div className="border">
-        {AccordionsDatas.map((data, index) => {
-          return (
-            <div onClick={() => setindexClicked(index)} key={`data-${index}`}>
-              {data.name}
-              {index === indexClicked && <div>{data.content}</div>}
-            </div>
-          );
-        })}
-      </div>
+    <div>
+      <h4>BUTTON ACCORDIONS</h4>
+      <div className="Acco-main">
+        <div className="Acco-info">
+          <h5>ONE AT A TIME</h5>
+          {AccordionsDatas.map((data, index) => {
+            return (
+              <div className="Acco" onClick={() => setindexClicked(index)} key={`data-${index}`}>
+                <button>{data.name}</button>
+                {index === indexClicked && <div>{data.content}</div>}
+              </div>
+            );
+          })}
+        </div>
 
-      <div className="border">
-        {AccordionsDatas.map((data, index) => {
-          return (
-            <MultiAccordions
-              key={`data-${index}`}
-              index={index}
-              data={data}
-            ></MultiAccordions>
-          );
-        })}
+        <div className="Acco-info">
+          <h5>MULTIPLE OPEN</h5>
+          {AccordionsDatas.map((data, index) => {
+            return (
+              <MultiAccordions
+                key={`data-${index}`}
+                index={index}
+                data={data}
+              ></MultiAccordions>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
