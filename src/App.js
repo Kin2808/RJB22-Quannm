@@ -13,6 +13,7 @@ import TABS from "./exercise/Session3/TABS/ButtonTab/TABS";
 import IconTab from "./exercise/Session3/TABS/iconTab/iconTab";
 import TextTab from "./exercise/Session3/TABS/TextTab/TextTab";
 import ButtonAccordions from "./exercise/Session3/Accordions/Button-accordions/main";
+import VerticalButton from "./exercise/Session3/TABS/VerticalTab/VerticalButton";
 
 function App() {
   return (
@@ -64,6 +65,8 @@ function App() {
     {/* <IconTab></IconTab> */}
 
     {/* <TextTab></TextTab> */}
+
+    {/* <VerticalButton></VerticalButton> */}
 
     <ButtonAccordions></ButtonAccordions>
     </>

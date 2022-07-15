@@ -5,6 +5,7 @@
 .Texttabs-info {
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid #ccc;
 }
 
 .Texttabs-info button {
@@ -17,16 +18,17 @@
     font-size: 12px;
     border: none;
     background-color: #fff;
+    opacity: 0.6;
 }
 
 .Texttabs-info button:hover {
-    background-color: #eee;
+    opacity: 1;
 }
 
 .Texttabs-info button:focus {
-    background-color: #2ecc71;
     outline: none;
-    color: #fff;
+    color:#47b475;
+    border-bottom: 1px solid #47b475;
 }
 
 .Texttabs-txt {
@@ -36,8 +38,7 @@
 }
 
 .Texttabs {
-    
-    width: 600px;
+    width: 700px;
     margin: auto
 }
 

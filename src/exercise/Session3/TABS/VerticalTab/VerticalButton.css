@@ -1,0 +1,48 @@
+.VB-main {
+    width: 1170px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.VB-head button{
+    border: none;
+    background-color: #fff;
+    width: 300px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.VB-head button:focus {
+    outline: none;
+    background-color: #47b475 !important;
+    color: #fff;
+}
+
+.VB-head button:hover {
+    background-color: #eee;
+}
+
+.VB-head ul {
+    list-style: none;
+    height: 25px;
+    padding: 12px 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.VB-info h4 {
+    text-align: left;
+}
+
+.VB-info h5 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.VB-info p{
+    font-size: 13px;
+    line-height: 25px;
+}

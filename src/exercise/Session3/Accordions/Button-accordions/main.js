@@ -25,20 +25,30 @@ export default function ButtonAccordions() {
   return (
     <div>
       <h4>BUTTON ACCORDIONS</h4>
-      <div className="Acco-main">
-        <div className="Acco-info">
+      <div className="Acco-main row">
+        <div className="col-sm-6">
           <h5>ONE AT A TIME</h5>
           {AccordionsDatas.map((data, index) => {
+            const isActiveTab = index === indexClicked;
             return (
-              <div className="Acco" onClick={() => setindexClicked(index)} key={`data-${index}`}>
-                <button>{data.name}</button>
-                {index === indexClicked && <div>{data.content}</div>}
+              <div
+                style={{
+                  backgroundColor: isActiveTab ? "#47b475" : "#fff",
+                  color: isActiveTab ? "white" : "black",
+                  border: isActiveTab ? "1px solid #ccc" : "none",
+                }}
+                className="Acco"
+                onClick={() => setindexClicked(index)}
+                key={`data-${index}`}
+              >
+                <div>{data.name}</div>
+                {index === indexClicked && <p>{data.content}</p>}
               </div>
             );
           })}
         </div>
 
-        <div className="Acco-info">
+        <div className="col-sm-6">
           <h5>MULTIPLE OPEN</h5>
           {AccordionsDatas.map((data, index) => {
             return (

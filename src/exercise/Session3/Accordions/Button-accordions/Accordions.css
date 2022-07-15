@@ -1,9 +1,6 @@
 .Acco-main {
-    display: flex;
-}
-
-.Acco-info {
-    width: 50%;
+    margin: 0 auto;
+    width: 1170px;
 }
 
 h4 {
@@ -23,16 +20,28 @@ h5{
 .Acco {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
-.Acco button {
-    border: none;
+.Acco div {
+    height: 40px;
+    padding: 13px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.Acco div:hover {
+    background-color: #eee;
+}
+
+.Acco p {
     background-color: #fff;
-    text-align: left;
+    color: #000;
+    margin-bottom: 0;
+    font-size: 13px;
+    padding: 13px;
+    line-height: 30px;
 }
-
-.Acco button:focus {
-    background-color: green;
-    outline: none;
-}
-
