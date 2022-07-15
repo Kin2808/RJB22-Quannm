@@ -14,6 +14,11 @@ import IconTab from "./exercise/Session3/TABS/iconTab/iconTab";
 import TextTab from "./exercise/Session3/TABS/TextTab/TextTab";
 import ButtonAccordions from "./exercise/Session3/Accordions/Button-accordions/main";
 import VerticalButton from "./exercise/Session3/TABS/VerticalTab/VerticalButton";
+import Image from "./exercise/Session3/Image/Image";
+
+import axios from 'axios'
+import UseEffect from "./component/Example/useEffect";
+axios.defaults.baseURL = 'https://62d16ed1d4eb6c69e7dd5691.mockapi.io/'
 
 function App() {
   return (
@@ -68,7 +73,11 @@ function App() {
 
     {/* <VerticalButton></VerticalButton> */}
 
-    <ButtonAccordions></ButtonAccordions>
+    {/* <ButtonAccordions></ButtonAccordions> */}
+
+    {/* <Image></Image> */}
+
+    <UseEffect></UseEffect>
     </>
   );
 }
