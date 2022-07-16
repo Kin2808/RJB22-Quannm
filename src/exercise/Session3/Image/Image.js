@@ -1,23 +1,40 @@
-import React, {useState} from 'react'
-// import img from './img/1.jpg'
-// import img from './img/2.jpg'
-// import img from './img/3.jpg'
-// import img from './img/4.jpg'
-// import img from './img/5.jpg'
+import React, { useState } from "react";
+import img1 from "./img/1.jpg";
+import img2 from "./img/2.jpg";
+import img3 from "./img/3.jpg";
+import img4 from "./img/4.jpg";
+import img5 from "./img/5.jpg";
 
-
-const dataImg = [1, 2, 3, 4, 5]
+const dataImg = [img1, img2, img3, img4, img5];
 export default function Image() {
-    const [imageIndex, setimageIndex] = useState(0)
+  const [imageIndex, setimageIndex] = useState(0);
   return (
     <>
-    {dataImg.map((data, index) => {
-      return (
-        <div>{data[0]} </div>
-      )
-    })}
-    <div
-    onClick={() => setimageIndex(imageIndex+1)}>Click here:{imageIndex}</div>
+    <div style={{textAlign: 'center'}}>
+      <button
+        onClick={() =>
+          setimageIndex(imageIndex === 0 ? dataImg.length - 1 : imageIndex - 1)
+        }
+      >
+        Previos
+      </button>
+      <button
+        onClick={() =>
+          setimageIndex(imageIndex === dataImg.length - 1 ? 0 : imageIndex + 1)
+        }
+      >
+        Next
+      </button>
+      {dataImg.map((data, index) => {
+        return (
+            <div key={index}>
+              {index === imageIndex && (
+                <img src={data} style={{ width: "50%" }}></img>
+              )}
+            </div>         
+        );
+      })}
+    </div>
     </>
-  )
+  );
 }
