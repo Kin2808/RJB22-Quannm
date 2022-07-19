@@ -17,8 +17,12 @@ import VerticalButton from "./exercise/Session3/TABS/VerticalTab/VerticalButton"
 import Image from "./exercise/Session3/Image/Image";
 import UseEffect from "./component/Example/useEffect";
 import TextAccordions from "./exercise/Session3/Accordions/Text-accordions/main";
+import Standard from "./exercise/Session3/Gallery/Standard";
+import ReactHookForm from "./component/Example/ReactHookForm";
 
 import axios from 'axios'
+import LikeHook from "./exercise/Session3/Like-button/LikeHook";
+import RateHook from "./exercise/Session3/Rate button/RateHook";
 axios.defaults.baseURL = 'https://62d16ed1d4eb6c69e7dd5691.mockapi.io/'
 
 function App() {
@@ -63,8 +67,10 @@ function App() {
     {/* <Lifecircle></Lifecircle> */}
 
     {/* <LikeButton></LikeButton> */}
+    {/* <LikeHook/> */}
 
     {/* <RateButton></RateButton> */}
+    <RateHook/>
 
     {/* <TABS></TABS> */}
     
@@ -76,11 +82,15 @@ function App() {
 
     {/* <ButtonAccordions></ButtonAccordions> */}
 
-    <TextAccordions></TextAccordions>
+    {/* <TextAccordions></TextAccordions> */}
 
     {/* <Image></Image> */}
 
+    {/* <Standard /> */}
+
     {/* <UseEffect></UseEffect> */}
+
+    {/* <ReactHookForm /> */}
     </>
   );
 }

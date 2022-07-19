@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 import Multiopen from "./Multiopen";
+import "./TextAccordions.css";
 
 export default function TextAccordions() {
   const [indexClicked, setindexClicked] = React.useState(0);
@@ -24,36 +25,35 @@ export default function TextAccordions() {
   ];
   return (
     <>
-      <div>
-        <h5>ONE AT A TIME</h5>
-        {TextAccordions.map((data, index) => {
-          return (
-            <div className="" onClick={() => setindexClicked(index)}>
-              {indexClicked == index ? (
-                <AiOutlinePlus></AiOutlinePlus>
-              ) : (
-                <AiOutlineMinus></AiOutlineMinus>
-              )}
-              <div>
-                {data.name}---index:{index}---Click{indexClicked}
+      <h4>TEXT ACCORDIONS</h4>
+      <div className="TA-main row">
+        <div className="col">
+          <h5>ONE AT A TIME</h5>
+          {TextAccordions.map((data, index) => {
+            return (
+              <div className="TA-info" onClick={() => setindexClicked(index)}>
+                <div className="TA">
+                {indexClicked == index ? (
+                  <AiOutlinePlus></AiOutlinePlus>
+                ) : (
+                  <AiOutlineMinus></AiOutlineMinus>
+                )}
+                {data.name}
+                </div>
+                {indexClicked == index && <p>{data.content}</p>}
               </div>
-              {indexClicked == index && <p>{data.content}</p>}
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
-      <div>
-        <h5>MULTIPLE OPEN</h5>
-        {TextAccordions.map((data, index) => {
-          return (
-            <Multiopen
-              data={data}
-              index={index}
-              key={index}
-            ></Multiopen>
-          );
-        })}
+        <div className="col">
+          <h5>MULTIPLE OPEN</h5>
+          {TextAccordions.map((data, index) => {
+            return (
+              <Multiopen data={data} index={index} key={index}></Multiopen>
+            );
+          })}
+        </div>
       </div>
     </>
   );

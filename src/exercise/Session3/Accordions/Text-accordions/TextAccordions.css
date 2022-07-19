@@ -1,0 +1,22 @@
+.TA-main {
+    width: 1170px;
+    margin: auto;
+}
+
+.TA {
+    border-bottom: 1px solid #ccc;
+    padding: 16px 0;
+    opacity: 0.6;
+    cursor: pointer;
+}   
+
+.TA:hover {
+    opacity: 1;
+}
+
+.TA-info p{
+    line-height: 24px;
+    margin: 0;
+    padding: 16px 0;
+    font-size: 13px;
+}
