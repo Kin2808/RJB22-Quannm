@@ -23,6 +23,9 @@ import ReactHookForm from "./component/Example/ReactHookForm";
 import axios from 'axios'
 import LikeHook from "./exercise/Session3/Like-button/LikeHook";
 import RateHook from "./exercise/Session3/Rate button/RateHook";
+import TabsHook from "./exercise/Session3/TABS/ButtonTab/TabsHook";
+import IconHook from "./exercise/Session3/TABS/iconTab/IconHook";
+import TextHook from "./exercise/Session3/TABS/TextTab/TextHook";
 axios.defaults.baseURL = 'https://62d16ed1d4eb6c69e7dd5691.mockapi.io/'
 
 function App() {
@@ -70,13 +73,16 @@ function App() {
     {/* <LikeHook/> */}
 
     {/* <RateButton></RateButton> */}
-    <RateHook/>
+    {/* <RateHook/> */}
 
     {/* <TABS></TABS> */}
+    {/* <TabsHook /> */}
     
     {/* <IconTab></IconTab> */}
+    {/* <IconHook/> */}
 
     {/* <TextTab></TextTab> */}
+    <TextHook/>
 
     {/* <VerticalButton></VerticalButton> */}
 
