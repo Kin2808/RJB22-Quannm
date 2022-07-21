@@ -18,14 +18,18 @@ import Image from "./exercise/Session3/Image/Image";
 import UseEffect from "./component/Example/useEffect";
 import TextAccordions from "./exercise/Session3/Accordions/Text-accordions/main";
 import Standard from "./exercise/Session3/Gallery/Standard";
-import ReactHookForm from "./component/Example/ReactHookForm";
-
-import axios from 'axios'
+import ReactHookForm from "./exercise/Session7/ReactHookForm";
 import LikeHook from "./exercise/Session3/Like-button/LikeHook";
 import RateHook from "./exercise/Session3/Rate button/RateHook";
 import TabsHook from "./exercise/Session3/TABS/ButtonTab/TabsHook";
 import IconHook from "./exercise/Session3/TABS/iconTab/IconHook";
 import TextHook from "./exercise/Session3/TABS/TextTab/TextHook";
+
+
+
+import axios from 'axios'
+import Session8 from "./exercise/Session8";
+
 axios.defaults.baseURL = 'https://62d16ed1d4eb6c69e7dd5691.mockapi.io/'
 
 function App() {
@@ -82,7 +86,7 @@ function App() {
     {/* <IconHook/> */}
 
     {/* <TextTab></TextTab> */}
-    <TextHook/>
+    {/* <TextHook/> */}
 
     {/* <VerticalButton></VerticalButton> */}
 
@@ -97,6 +101,8 @@ function App() {
     {/* <UseEffect></UseEffect> */}
 
     {/* <ReactHookForm /> */}
+
+    <Session8/>
     </>
   );
 }

@@ -35,41 +35,52 @@ export default function ReactHookForm() {
   return (
     <form
       style={{ width: `1000px`, margin: `auto`, textAlign: `center` }}
-      className="row"
+      className="form-group row"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="col-md-6">
+      <div className="col-md-6 mb-5">
         <label>Email:</label>
         <input
+          className="form-control"
           placeholder="Email"
           {...register("email", {
-            required: 'true',
+            required: "true",
             pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/,
           })}
         />
-        {errors.email && <p>Email is required</p>}
+        {errors.email && (
+          <p style={{ color: "red"}}>
+            Email is required
+          </p>
+        )}
         {/* <p>{errors.email  ? "sai cú pháp" : ""}</p> */}
       </div>
 
-      <div className="col-md-6">
+      <div className="col-md-6 mb-5">
         <label>Password:</label>
-        <input type="password" {...register("password", { required: true })} />
-        {errors.password && <p>Password is required</p>}
+        <input
+          className="form-control"
+          type="password"
+          {...register("password", { required: true })}
+        />
+        {errors.password && (
+          <p style={{ color: "red"}}>Password is required</p>
+        )}
       </div>
 
-      <div className="col-12">
+      <div className="col-12 mb-5">
         <label>Address:</label>
-        <input {...register("address")} />
+        <input className="form-control" placeholder="1234 Main St" {...register("address")} />
       </div>
 
-      <div className="col-12">
+      <div className="col-12 mb-5">
         <label>Address2:</label>
-        <input {...register("address2")} />
+        <input className="form-control" placeholder="Apartment, studio, or floor" {...register("address2")} />
       </div>
 
       <div className="col-4">
         <label>City:</label>
-        <select defaultValue="1" {...register("city", { required: true })}>
+        <select className="form-control" defaultValue="1" {...register("city", { required: true })}>
           <option value="1">Choose...</option>
           {cities.map((city) => {
             return <option key={city.code}>{city.name}</option>;
@@ -79,7 +90,7 @@ export default function ReactHookForm() {
 
       <div className="col-4">
         <label>District:</label>
-        <select defaultValue="1" {...register("district", { required: true })}>
+        <select className="form-control" defaultValue="1" {...register("district", { required: true })}>
           <option value="1">Choose...</option>
           {cities.map((city) => {
             return city.name === cityWatch
@@ -92,15 +103,17 @@ export default function ReactHookForm() {
       </div>
 
       <div className="col-4">
-        <label>Ward:</label>
-        <select defaultValue="" {...register("ward", { required: true })}>
+        <label>Commune:</label>
+        <select className="form-control" defaultValue="" {...register("ward", { required: true })}>
           <option value="">Choose...</option>
           {cities.map((city) => {
             return city.name === cityWatch
               ? city.districts.map((district) => {
                   return district.name === districtWatch
                     ? district.wards.map((ward) => {
-                        return <option key={`ward-${ward.code}`}>{ward.name}</option>;
+                        return (
+                          <option key={`ward-${ward.code}`}>{ward.name}</option>
+                        );
                       })
                     : null;
                 })
@@ -109,7 +122,20 @@ export default function ReactHookForm() {
         </select>
       </div>
 
-      <input className="" type="submit" />
+      <div className="col-12 mb-3 mt-3">
+        <div className="form-check text-left">
+          <input
+            type="checkbox"
+            className="form-check-input"
+          />
+          <label className="form-check-label">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <div className="col-12">
+        <button className="btn btn-primary" type="submit">Sign in</button>
+      </div>
     </form>
   );
 }
