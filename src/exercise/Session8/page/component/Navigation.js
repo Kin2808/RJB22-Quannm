@@ -3,17 +3,17 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navigation() {
   return (
-    <div style={{ backgroundColor: "#222"}} className="col-2">
-      <ul style={{ listStyle: "none" }}>
-        <li>
-          <NavLink style={{ color: "white", textDecoration: "none" }} to="/">
+    <div style={{ backgroundColor: "#222" }} className="col-2">
+      <ul style={{ listStyle: "none", padding: '0 50px' }}>
+        <li style={{ paddingTop: '30px' }}>
+          <NavLink style={{ color: "white", textDecoration: "none"}} to="/">
             Home
           </NavLink>
         </li>
-        <li style={{ color: "white" }}>
+        <li style={{ color: "white",paddingTop: '30px' }}>
           Customer
           <ul>
-            <li>
+            <li style={{margin: '20px 0 0 30px'}}>
               <Link
                 style={{ color: "white", textDecoration: "none" }}
                 to="/customer/list"
@@ -21,7 +21,7 @@ export default function Navigation() {
                 List
               </Link>
             </li>
-            <li>
+            <li style={{margin: '20px 0 0 30px'}}>
               <Link
                 style={{ color: "white", textDecoration: "none" }}
                 to="/customer/form"
@@ -31,10 +31,10 @@ export default function Navigation() {
             </li>
           </ul>
         </li>
-        <li style={{ color: "white" }}>
+        <li style={{ color: "white",paddingTop: '30px' }}>
           Product
           <ul>
-            <li>
+            <li style={{margin: '20px 0 0 30px'}}>
               <Link
                 style={{ color: "white", textDecoration: "none" }}
                 to="/product/list"
@@ -42,7 +42,7 @@ export default function Navigation() {
                 List
               </Link>
             </li>
-            <li>
+            <li style={{margin: '20px 0 0 30px'}}>
               <Link
                 style={{ color: "white", textDecoration: "none" }}
                 to="/product/form"

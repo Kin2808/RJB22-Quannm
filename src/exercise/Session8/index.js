@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.css'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from './page/component/Header';
 import Navigation from './page/component/Navigation';
@@ -14,8 +15,9 @@ export default function Session8() {
   return (
     <BrowserRouter>
     <Header/>
+
     <div style={{minHeight: 1000}} className='row'>
-    <Navigation/>
+    <Navigation />
 
     <Routes>
         <Route path='/' element={<Home/>} />
@@ -37,6 +39,7 @@ export default function Session8() {
         </Route>
     </Routes>
     </div>
+
     </BrowserRouter>
   )
 }

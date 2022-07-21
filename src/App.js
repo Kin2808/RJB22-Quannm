@@ -27,10 +27,10 @@ import TextHook from "./exercise/Session3/TABS/TextTab/TextHook";
 
 
 
-import axios from 'axios'
+// import axios from 'axios'
 import Session8 from "./exercise/Session8";
 
-axios.defaults.baseURL = 'https://62d16ed1d4eb6c69e7dd5691.mockapi.io/'
+// axios.defaults.baseURL = 'https://62d16ed1d4eb6c69e7dd5691.mockapi.io/'
 
 function App() {
   return (
