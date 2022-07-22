@@ -4,6 +4,7 @@ import { RiDeleteBinLine, RiFileEditLine } from "react-icons/ri";
 
 export default function CustomerList() {
   const [customerList, setcustomerList] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   // Gọi data về
   let url = "https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer";
@@ -17,6 +18,7 @@ export default function CustomerList() {
       });
       let tempUsers = await response.data;
       setcustomerList(tempUsers);
+      setLoading(false)
     } catch (err) {
       console.log("Error: ", err.message);
     }
@@ -26,6 +28,11 @@ export default function CustomerList() {
     fetchData(url);
   }, []);
   //End
+
+
+  const handleOnDelete = (a) => {
+    console.log(a);
+  }
 
   return (
     <div style={{ padding: 0 }} className="col-10">
@@ -43,6 +50,7 @@ export default function CustomerList() {
             <th scope="col">FEATURE</th>
           </tr>
         </thead>
+        {loading && <p>PLEASE WAIT...!</p>}
         <tbody>
           {customerList.map((customer, index) => {
             return (

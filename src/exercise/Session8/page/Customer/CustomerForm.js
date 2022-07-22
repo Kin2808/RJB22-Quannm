@@ -14,6 +14,8 @@ export default function CustomerForm() {
     console.log(data);
   };
 
+  
+
   return (
     <form style={{backgroundColor: '#282828'}} className="col-10" onSubmit={handleSubmit(onSubmit)}>
       <div className="form-group">
@@ -67,6 +69,28 @@ export default function CustomerForm() {
           placeholder="ZIP..."
         />
         {errors.postcode && (<p style={{color: 'red'}}>Please fill your postcode!</p>)}
+      </div>
+
+      <div className="form-group">
+        <label style={{color: 'white'}}>gender</label>
+        <input
+        type='number'
+          {...register('gender', {required: true})}
+          className="form-control"
+          placeholder="ZIP..."
+        />
+        {errors.gender && (<p style={{color: 'red'}}>Please fill your gender!</p>)}
+      </div>
+
+      <div className="form-group">
+        <label style={{color: 'white'}}>DOB</label>
+        <input
+        type='number'
+          {...register('DOB', {required: true})}
+          className="form-control"
+          placeholder="ZIP..."
+        />
+        {errors.DOB && (<p style={{color: 'red'}}>Please fill your DOB!</p>)}
       </div>
 
       <button type="submit" className="btn btn-primary">
