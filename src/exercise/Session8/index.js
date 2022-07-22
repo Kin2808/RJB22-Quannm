@@ -6,7 +6,7 @@ import Navigation from "./page/component/Navigation";
 import Customer from "./page/Customer/Customer";
 import CustomerForm from "./page/Customer/CustomerForm";
 import CustomerList from "./page/Customer/CustomerList";
-import Home from "./page/Home";
+import Home from "./page/Home/Home";
 import Product from "./page/Product/Product";
 import ProductForm from "./page/Product/ProductForm";
 import ProductList from "./page/Product/ProductList";

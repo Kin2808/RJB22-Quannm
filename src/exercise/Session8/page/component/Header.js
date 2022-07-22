@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -15,7 +16,9 @@ export default function Header() {
       }}
       className="col-12"
     >
-      Hello World
+      <Link style={{ color: "white", textDecoration: "none" }} to="/">
+        Hello World
+      </Link>
     </div>
   );
 }

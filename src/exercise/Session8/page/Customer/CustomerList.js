@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { RiDeleteBinLine, RiFileEditLine } from "react-icons/ri";
 
@@ -29,10 +30,19 @@ export default function CustomerList() {
   }, []);
   //End
 
-
-  const handleOnDelete = (a) => {
-    console.log(a);
-  }
+  // Xóa data
+  const deleteData = (id) => {
+    axios
+      .delete('https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer/' + id)
+      .then(function (res) {
+        console.log(res);
+        fetchData();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+  //End
 
   return (
     <div style={{ padding: 0 }} className="col-10">
@@ -64,8 +74,10 @@ export default function CustomerList() {
                 <td>{customer.gender}</td>
                 <td>{customer.phone}</td>
                 <td>
-                  <RiFileEditLine style={{fontSize: 20, marginRight: 13}} />
-                  <RiDeleteBinLine style={{fontSize: 20}} />
+                  <Link to={`/customer/edit/${customer.id}`}>
+                  <RiFileEditLine style={{fontSize: 20, marginRight: 13, color: 'white'}} />
+                  </Link>
+                  <RiDeleteBinLine onClick={(e) => deleteData(customer.id, e)} style={{fontSize: 20, cursor: 'pointer'}} />
                 </td>
               </tr>
             );
