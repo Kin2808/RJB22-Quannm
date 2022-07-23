@@ -15,7 +15,7 @@ export default function Session8() {
   return (
     <BrowserRouter>
       <Header />
-      <div style={{ minHeight: 1000 }} className="row">
+      <div style={{ minHeight: 1200 }} className="row">
         <Navigation />
 
         <Routes>

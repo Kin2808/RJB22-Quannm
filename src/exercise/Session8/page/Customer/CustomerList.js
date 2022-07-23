@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { RiDeleteBinLine, RiFileEditLine } from "react-icons/ri";
 
 export default function CustomerList() {
   const [customerList, setcustomerList] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  const [pageNumber, setpageNumber] = useState (0)
 
   // Gọi data về
   let url = "https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer";
@@ -13,13 +15,13 @@ export default function CustomerList() {
     try {
       let response = await axios.get(url, {
         params: {
-          page: 1,
+          page: pageNumber+1,
           limit: 20,
         },
       });
       let tempUsers = await response.data;
       setcustomerList(tempUsers);
-      setLoading(false)
+      setLoading(false);
     } catch (err) {
       console.log("Error: ", err.message);
     }
@@ -27,15 +29,15 @@ export default function CustomerList() {
 
   useEffect(() => {
     fetchData(url);
-  }, []);
+  }, [pageNumber]);
   //End
 
   // Xóa data
   const deleteData = (id) => {
     axios
-      .delete('https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer/' + id)
+      .delete("https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer/" + id)
       .then(function (res) {
-        console.log(res);
+        toast.success("Successfully Delete!");
         fetchData();
       })
       .catch(function (error) {
@@ -45,8 +47,9 @@ export default function CustomerList() {
   //End
 
   return (
-    <div style={{ padding: 0 }} className="col-10">
-      <table className="table table-striped table-dark">
+    <div style={{ padding: 0, marginTop: '80px' }} className="col-10">
+      <Toaster position="top-center" reverseOrder={false} />
+      <table style={{height:'100%'}} className="table table-striped table-dark">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -75,9 +78,14 @@ export default function CustomerList() {
                 <td>{customer.phone}</td>
                 <td>
                   <Link to={`/customer/edit/${customer.id}`}>
-                  <RiFileEditLine style={{fontSize: 20, marginRight: 13, color: 'white'}} />
+                    <RiFileEditLine
+                      style={{ fontSize: 20, marginRight: 13, color: "white" }}
+                    />
                   </Link>
-                  <RiDeleteBinLine onClick={(e) => deleteData(customer.id, e)} style={{fontSize: 20, cursor: 'pointer'}} />
+                  <RiDeleteBinLine
+                    onClick={(e) => deleteData(customer.id, e)}
+                    style={{ fontSize: 20, cursor: "pointer" }}
+                  />
                 </td>
               </tr>
             );

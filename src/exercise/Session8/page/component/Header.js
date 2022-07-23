@@ -1,4 +1,5 @@
 import React from "react";
+import './header.css'
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -10,11 +11,11 @@ export default function Header() {
         height: 80,
         width: "100%",
         textAlign: "center",
-        fontFamily: "cursive",
-        fontSize: 40,
-        borderBottom: "1px solid white",
+        fontSize: 55,
+        position: 'fixed',
+        zIndex: 1
       }}
-      className="col-12"
+      className="col-12 home-main"
     >
       <Link style={{ color: "white", textDecoration: "none" }} to="/">
         Hello World

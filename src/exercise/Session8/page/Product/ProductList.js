@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { RiDeleteBinLine, RiFileEditLine } from "react-icons/ri";
 
@@ -32,7 +33,7 @@ export default function CustomerList() {
     axios
       .delete('https://62d8d6ff9c8b5185c78d9a81.mockapi.io/product/' + id)
       .then(function (res) {
-        console.log(res);
+        toast.success('Successfully Delete!')
         fetchData();
       })
       .catch(function (error) {
@@ -41,8 +42,9 @@ export default function CustomerList() {
   };
 
   return (
-    <div style={{ padding: 0 }} className="col-10">
-      <table className="table table-striped table-dark">
+    <div style={{ padding: 0, marginTop: '80px' }} className="col-10">
+      <Toaster position="top-center" reverseOrder={false} />
+      <table style={{height:'100%'}} className="table table-striped table-dark">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -59,7 +61,7 @@ export default function CustomerList() {
               <tr key={`product-${index}`}>
                 <th scope="row">{product.id}</th>
                 <td>{product.name}</td>
-                <td>{product.color}</td>
+                <td style={{backgroundColor: `${product.color}`, borderRadius: '55px', textAlign:'center', lineHeight:'48px'}}>{product.color}</td>
                 <td>{product.price}</td>
                 <td>{product.description}</td>
                 <td>
