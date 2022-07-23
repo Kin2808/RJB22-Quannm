@@ -15,16 +15,20 @@ export default function CustomerForm() {
     formState: { errors },
   } = useForm();
 
-  //Lay data ve
+  //Lay data ve khi update
   let url = "https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer/" + id;
-  async function fetchList(id) {
+  async function fetchList() {
     try {
       let res = await axios.get(url);
       let temp = await res.data;
       setcustomerList(temp);
       if (id) {
         setValue("name", temp.name);
+        setValue("postcode", temp.postcode);
         setValue("address", temp.address);
+        setValue("dob", temp.dob);
+        setValue("email", temp.email);
+        setValue("gender", temp.gender);
         setValue("phone", temp.phone);
       }
     } catch (err) {
@@ -33,7 +37,10 @@ export default function CustomerForm() {
   }
 
   useEffect(() => {
-    fetchList(url);
+    if (id) {
+      let tempCustomer = fetchList(url)
+      tempCustomer.then((res) => res)
+    }
   }, []);
   //End
 
@@ -51,18 +58,9 @@ export default function CustomerForm() {
   };
 
   //Tao data moi
-  const postData = (data) => {
-    let Data = {
-      name: data.name,
-      phone: data.phone,
-      gender: data.gender,
-      email: data.email,
-      DOB: data.dob,
-      address: data.address,
-      postcode: data.postcode,
-    };
+  const postData = () => {
     axios
-      .post("https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer/", Data)
+      .post("https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer/")
       .then(function (res) {
         console.log(res);
       })

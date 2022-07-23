@@ -6,6 +6,7 @@ import { RiDeleteBinLine, RiFileEditLine } from "react-icons/ri";
 
 export default function CustomerList() {
   const [productList, setproductList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // Gọi data về
   let url = "https://62d8d6ff9c8b5185c78d9a81.mockapi.io/product";
@@ -19,6 +20,7 @@ export default function CustomerList() {
       });
       let tempUsers = await response.data;
       setproductList(tempUsers);
+      setLoading(!loading)
     } catch (err) {
       console.log("Error: ", err.message);
     }
@@ -55,13 +57,14 @@ export default function CustomerList() {
             <th scope="col">FEATURE</th>
           </tr>
         </thead>
+        {loading && <span>PLEASE WAIT...!</span>}
         <tbody>
           {productList.map((product, index) => {
             return (
               <tr key={`product-${index}`}>
-                <th scope="row">{product.id}</th>
+                <th scope="row">{index+1}</th>
                 <td>{product.name}</td>
-                <td style={{backgroundColor: `${product.color}`, borderRadius: '55px', textAlign:'center', lineHeight:'48px'}}>{product.color}</td>
+                <td style={{backgroundColor: `${product.color}`, borderRadius: '50%', textAlign:'center', lineHeight:'48px'}}>{product.color}</td>
                 <td>{product.price}</td>
                 <td>{product.description}</td>
                 <td>

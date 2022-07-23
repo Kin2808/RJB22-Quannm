@@ -63,12 +63,12 @@ export default function CustomerList() {
             <th scope="col">FEATURE</th>
           </tr>
         </thead>
-        {loading && <p>PLEASE WAIT...!</p>}
+        {loading && <span>PLEASE WAIT...!</span>}
         <tbody>
           {customerList.map((customer, index) => {
             return (
               <tr key={`customer-${index}`}>
-                <th scope="row">{customer.id}</th>
+                <th scope="row">{index+1}</th>
                 <td>{customer.name}</td>
                 <td>{customer.postCode}</td>
                 <td>{customer.address}</td>

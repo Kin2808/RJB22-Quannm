@@ -32,7 +32,10 @@ export default function ProductForm() {
   }
 
   useEffect(() => {
-    fetchList(url);
+    if (id) {
+      let tempProduct = fetchList(url)
+      tempProduct.then((res) => res)
+    }
   }, []);
 
   const onSubmit = (data, e) => {
@@ -49,14 +52,9 @@ export default function ProductForm() {
   };
 
   //Tao 1 data moi
-  const postData = (data) => {
-    let Data = {
-      name: data.name,
-      color: data.color,
-      price: data.price,
-    };
+  const postData = () => {
     axios
-      .post("https://62d8d6ff9c8b5185c78d9a81.mockapi.io/product", Data)
+      .post("https://62d8d6ff9c8b5185c78d9a81.mockapi.io/product")
       .then(function (res) {
         console.log(res);
       })
