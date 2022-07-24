@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { RiDeleteBinLine, RiFileEditLine } from "react-icons/ri";
+import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
+import "./customer.css";
 
 export default function CustomerList() {
   const [customerList, setcustomerList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [pageNumber, setpageNumber] = useState (0)
+  const [pageNumber, setpageNumber] = useState(1);
 
   // Gọi data về
   let url = "https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer";
@@ -15,7 +17,7 @@ export default function CustomerList() {
     try {
       let response = await axios.get(url, {
         params: {
-          page: pageNumber+1,
+          page: pageNumber,
           limit: 20,
         },
       });
@@ -47,9 +49,12 @@ export default function CustomerList() {
   //End
 
   return (
-    <div style={{ padding: 0, marginTop: '80px' }} className="col-10">
+    <div style={{ padding: 0, marginTop: "80px" }} className="col-10">
       <Toaster position="top-center" reverseOrder={false} />
-      <table style={{height:'100%'}} className="table table-striped table-dark">
+      <table
+        style={{ height: "100%" }}
+        className="customer table table-striped table-dark"
+      >
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -68,7 +73,7 @@ export default function CustomerList() {
           {customerList.map((customer, index) => {
             return (
               <tr key={`customer-${index}`}>
-                <th scope="row">{index+1}</th>
+                <th scope="row">{index + 1}</th>
                 <td>{customer.name}</td>
                 <td>{customer.postCode}</td>
                 <td>{customer.address}</td>
@@ -91,6 +96,26 @@ export default function CustomerList() {
             );
           })}
         </tbody>
+
+        <button
+          className="customer-btn-a"
+          onClick={() => {
+            {
+              pageNumber > 1 && setpageNumber(pageNumber - 1);
+            }
+          }}
+        >
+          <GrLinkPrevious />
+        </button>
+
+        <button
+          className="customer-btn-b"
+          onClick={() => {
+            customerList.length == 20 && setpageNumber(pageNumber + 1);
+          }}
+        >
+          <GrLinkNext />
+        </button>
       </table>
     </div>
   );

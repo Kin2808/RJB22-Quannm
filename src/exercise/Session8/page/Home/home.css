@@ -1,0 +1,31 @@
+.home-main {
+    font-family: myfont;
+}
+
+.home-main img:hover {
+  opacity: 0.4;
+}
+.hone {
+  position: relative;
+}
+
+.home-txt {
+  position: absolute;
+  width: 95%;
+  top: 20%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  font-size: 28px;
+}
+
+.home-txt h1 {
+    position: absolute;
+    width: 95%;
+    top: 0;
+    text-align: center;
+    color: white;
+}
+
+.home:hover .home-txt {
+  opacity: 1;
+}

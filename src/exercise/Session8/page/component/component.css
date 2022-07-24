@@ -1,0 +1,19 @@
+@font-face {
+    font-family: myfont;
+    src: url(./Cream\ Cake.otf);
+}
+
+.header-main  {
+    font-family: myfont;
+    box-shadow: 0 0 0 1px #fff5,
+    0 0 5px #fff,
+    0 0 20px #fff;
+}
+
+.nav-main a {
+    opacity: 0.8;
+}
+
+.nav-main a:hover {
+    opacity: 1;
+}

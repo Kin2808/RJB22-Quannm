@@ -1,4 +1,5 @@
 import React from "react";
+import './component.css'
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 
@@ -6,7 +7,7 @@ export default function Navigation() {
   return (
     <div
       style={{ backgroundColor: "#222", marginTop: "80px" }}
-      className="col-2"
+      className="col-2 nav-main"
     >
       <ul style={{ listStyle: "none", padding: "0 50px" }}>
         <li style={{ paddingTop: "30px" }}>

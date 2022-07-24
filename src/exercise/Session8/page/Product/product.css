@@ -1,0 +1,27 @@
+.product {
+    position: relative;
+}
+
+.product-btn-a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    opacity: 0.1;
+    width: 2%;
+}
+
+.product-btn-b {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    opacity: 0.1;
+    width: 2%;
+}
+
+.product-btn-a:hover,
+.product-btn-b:hover {
+    opacity: 0.2;
+
+}
