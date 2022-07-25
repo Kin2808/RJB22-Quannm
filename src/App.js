@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css'
+import "./App.css";
 import ChartColumn from "./exercise/Session2/ChartColumn/ChartColumn";
 import LikeButton from "./exercise/Session3/Like-button/LikeButton";
 import RateButton from "./exercise/Session3/Rate button/RateButton";
@@ -25,8 +25,6 @@ import TabsHook from "./exercise/Session3/TABS/ButtonTab/TabsHook";
 import IconHook from "./exercise/Session3/TABS/iconTab/IconHook";
 import TextHook from "./exercise/Session3/TABS/TextTab/TextHook";
 
-
-
 // import axios from 'axios'
 import Session8 from "./exercise/Session8";
 import Redux from "./component/Example/redux";
@@ -36,11 +34,11 @@ import Redux from "./component/Example/redux";
 function App() {
   return (
     <>
-    {/* <Session1></Session1> */}
+      {/* <Session1></Session1> */}
 
-    {/* <Session2></Session2> */}
-    
-    {/* <div className="ChartBar1">
+      {/* <Session2></Session2> */}
+
+      {/* <div className="ChartBar1">
       <ChartBar1 text='BANDWIDTH' color1='red1' colors='red' percentage={20}></ChartBar1>
       <ChartBar1 text='STORAGE' color1='lightblue1' colors='lightblue' percentage={50}></ChartBar1>
       <ChartBar1 text='USERS' color1='green1' colors='green' percentage={70}></ChartBar1>
@@ -50,7 +48,7 @@ function App() {
       <ChartBar1 text='OTHERS' color1='blue1' colors='blue' percentage={37}></ChartBar1>
     </div> */}
 
-    {/* <div className="Profile">
+      {/* <div className="Profile">
       <Profile Name='HTML' IconName={<i class="fa-brands fa-android"></i>} color='green' likes={60}></Profile>
       <Profile Name='CSS' IconName={<i class="fa-brands fa-apple"></i>} color='red' likes={50}></Profile>
       <Profile Name='PHP' IconName={<i class="fa-solid fa-box-open"></i>} color='blue' likes={25}></Profile>
@@ -58,54 +56,54 @@ function App() {
       <Profile Name='.Net' IconName={<i class="fa-solid fa-diagram-project"></i>} color='purple' likes={35}></Profile>
     </div> */}
 
-    {/* <div className="SocialBlock row justify-content-around">
+      {/* <div className="SocialBlock row justify-content-around">
       <SocialBlock className='col-2' text='Facebook' color='blue' iconName={<i className="fa-brands fa-facebook-f"></i>} total={500000} unit='Likes'></SocialBlock>
       <SocialBlock className='col-2' text='Twitter' color='blue1' iconName={<i className="fa-brands fa-twitter"></i>} total={40000} unit='Tweets'></SocialBlock>
       <SocialBlock className='col' text='Google +' color='orange' iconName={<i className="fa-brands fa-google-plus-g"></i>} total={460000} unit='Plus'></SocialBlock>
       <SocialBlock className='col' text='Pinterest' color='red' iconName={<i className="fa-brands fa-pinterest"></i>} total={34000} unit='Pins'></SocialBlock>
     </div> */}
 
-    {/* <div className="ChartColumn">
+      {/* <div className="ChartColumn">
       <ChartColumn text="TODAY'S VISITORS" total={'24,599'} unit='' percentages={[20, 45, 30, 80, 75]}></ChartColumn>
       <ChartColumn text="YESTERDAY'S VISITORS" total={'15,699'} unit='' percentages={[20, 45, 30, 80, 75]}></ChartColumn>
       <ChartColumn text="TOTAL DOWNLOADS" total={'1,24,599'} unit='' percentages={[20, 45, 30, 80, 75]}></ChartColumn>
       <ChartColumn text="CURRENT INCOME" total={'54,599'} unit='$' percentages={[20, 45, 30, 80, 75]}></ChartColumn>
     </div> */}
 
-    {/* <Lifecircle></Lifecircle> */}
+      {/* <Lifecircle></Lifecircle> */}
 
-    {/* <LikeButton></LikeButton> */}
-    {/* <LikeHook/> */}
+      {/* <LikeButton></LikeButton> */}
+      {/* <LikeHook/> */}
 
-    {/* <RateButton></RateButton> */}
-    {/* <RateHook/> */}
+      {/* <RateButton></RateButton> */}
+      {/* <RateHook/> */}
 
-    {/* <TABS></TABS> */}
-    {/* <TabsHook /> */}
-    
-    {/* <IconTab></IconTab> */}
-    {/* <IconHook/> */}
+      {/* <TABS></TABS> */}
+      {/* <TabsHook /> */}
 
-    {/* <TextTab></TextTab> */}
-    {/* <TextHook/> */}
+      {/* <IconTab></IconTab> */}
+      {/* <IconHook/> */}
 
-    {/* <VerticalButton></VerticalButton> */}
+      {/* <TextTab></TextTab> */}
+      {/* <TextHook/> */}
 
-    {/* <ButtonAccordions></ButtonAccordions> */}
+      {/* <VerticalButton></VerticalButton> */}
 
-    {/* <TextAccordions></TextAccordions> */}
+      {/* <ButtonAccordions></ButtonAccordions> */}
 
-    {/* <Image></Image> */}
+      {/* <TextAccordions></TextAccordions> */}
 
-    {/* <Standard /> */}
+      {/* <Image></Image> */}
 
-    {/* <UseEffect></UseEffect> */}
+      {/* <Standard /> */}
 
-    {/* <ReactHookForm /> */}
+      {/* <UseEffect></UseEffect> */}
 
-    {/* <Session8/> */}
+      {/* <ReactHookForm /> */}
 
-    <Redux/>
+      {/* <Session8/> */}
+
+      <Redux />
     </>
   );
 }
