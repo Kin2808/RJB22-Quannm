@@ -120,7 +120,7 @@ export default function CustomerForm() {
             <div className="form-group col-6">
               <label style={{ color: "white" }}>Name</label>
               <input
-                {...register("name", { required: true })}
+               
                 className="form-control"
                 placeholder="Your name is..."
               />
