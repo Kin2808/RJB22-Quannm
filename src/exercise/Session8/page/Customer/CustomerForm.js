@@ -11,9 +11,20 @@ export default function CustomerForm() {
     register,
     handleSubmit,
     watch,
+    reset,
     setValue,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValue: {
+      name: "",
+      postcode: "",
+      address: "",
+      dob: "",
+      email: "",
+      gender: "",
+      phone: "",
+    },
+  });
 
   //Lay data ve khi update
   let url = "https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer/" + id;
@@ -31,6 +42,7 @@ export default function CustomerForm() {
         setValue("gender", temp.gender);
         setValue("phone", temp.phone);
       }
+      return temp;
     } catch (err) {
       console.log(err);
     }
@@ -38,10 +50,12 @@ export default function CustomerForm() {
 
   useEffect(() => {
     if (id) {
-      let tempCustomer = fetchList(url)
-      tempCustomer.then((res) => res)
+      let tempCustomer = fetchList(url);
+      tempCustomer.then((res) => res);
+    } else {
+      reset();
     }
-  }, []);
+  }, [id]);
   //End
 
   const onSubmit = (data, e) => {

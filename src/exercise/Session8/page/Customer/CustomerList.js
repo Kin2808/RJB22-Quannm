@@ -38,14 +38,18 @@ export default function CustomerList() {
   const deleteData = (id) => {
     axios
       .delete("https://62d8d6ff9c8b5185c78d9a81.mockapi.io/customer/" + id)
-      .then(function (res) {
+      .then(res => setcustomerList(customerList.filter(element => {
+        return element.id !== id
+      }))
+      )
+      .then(function(res) {
         toast.success("Successfully Delete!");
-        fetchData();
       })
       .catch(function (error) {
         console.log(error);
       });
   };
+
   //End
 
   return (
@@ -111,7 +115,7 @@ export default function CustomerList() {
         <button
           className="customer-btn-b"
           onClick={() => {
-            customerList.length == 20 && setpageNumber(pageNumber + 1);
+            setpageNumber(pageNumber + 1);
           }}
         >
           <GrLinkNext />

@@ -11,9 +11,14 @@ export default function ProductForm() {
     register,
     handleSubmit,
     watch,
+    reset,
     setValue,
     formState: { errors },
-  } = useForm();
+  } = useForm({defaultValues: {
+    name: '',
+    color: '',
+    price: '',
+  }});
 
   let url = "https://62d8d6ff9c8b5185c78d9a81.mockapi.io/product/" + id;
   async function fetchList(id) {
@@ -36,7 +41,10 @@ export default function ProductForm() {
       let tempProduct = fetchList(url)
       tempProduct.then((res) => res)
     }
-  }, []);
+    else {
+      reset()
+    }
+  }, [id]);
 
   const onSubmit = (data, e) => {
     e.preventDefault();
