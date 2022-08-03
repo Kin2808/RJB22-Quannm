@@ -27,12 +27,8 @@ import TextHook from "./exercise/Session3/TABS/TextTab/TextHook";
 
 // import axios from 'axios'
 import Session8 from "./exercise/Session8";
-<<<<<<< HEAD
-import Redux from "./component/Example/redux";
-import Session9 from "./exercise/Session9";
-=======
 // import Redux from "./component/Example/redux";
->>>>>>> 3fb663cca5e5e2e7acc229c479e793ec553c8dfc
+// import Session9 from "./exercise/Session9";
 
 // axios.defaults.baseURL = 'https://62d16ed1d4eb6c69e7dd5691.mockapi.io/'
 
@@ -109,11 +105,8 @@ function App() {
       <Session8/>
 
       {/* <Redux /> */}
-<<<<<<< HEAD
 
-      <Session9/>
-=======
->>>>>>> 3fb663cca5e5e2e7acc229c479e793ec553c8dfc
+      {/* <Session9/> */}
     </>
   );
 }
